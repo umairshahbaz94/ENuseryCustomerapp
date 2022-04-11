@@ -6,6 +6,7 @@ import 'package:shop_app/components/form_error.dart';
 import 'package:shop_app/helper/keyboard.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:shop_app/selectplant.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -62,8 +63,15 @@ class _SignFormState extends State<SignForm> {
               Text("Remember me"),
               Spacer(),
               GestureDetector(
-                onTap: () => Navigator.pushNamed(
-                    context, ForgotPasswordScreen.routeName),
+                onTap: (){
+
+                   Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Selectplant(
+                                      
+                                      )));
+                },
                 child: Text(
                   "Forgot Password",
                   style: TextStyle(decoration: TextDecoration.underline),

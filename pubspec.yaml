@@ -29,6 +29,7 @@ dependencies:
   http_auth:    
   webview_flutter:  
   toggle_bar: ^1.0.0
+  cached_network_image:
   
   firebase_auth:
 

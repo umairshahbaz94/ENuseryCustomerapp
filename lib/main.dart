@@ -7,6 +7,7 @@ import 'package:shop_app/Provider/CartProvider.dart';
 import 'package:shop_app/routes.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:shop_app/selectplant.dart';
 import 'package:shop_app/services/AddServices.dart';
 import 'package:shop_app/theme.dart';
 
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         // we dont need to remember the name
         initialRoute: SplashScreen.routeName,
         routes: routes,
+        // home: Selectplant(),
       ),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Myplants.dart';
+import 'package:shop_app/Task/alltask.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/selectplant.dart';
 
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -19,19 +22,35 @@ class Body extends StatelessWidget {
             press: () => {},
           ),
           ProfileMenu(
-            text: "Notifications",
+            text: "All Task ",
             icon: "assets/icons/Bell.svg",
-            press: () {},
+            press: () { Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Activetask()));
+
+            },
           ),
           ProfileMenu(
-            text: "Settings",
+            text: "My Plants",
             icon: "assets/icons/Settings.svg",
-            press: () {},
+            press: () {
+Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Visiter()));
+
+            },
           ),
-          ProfileMenu(
-            text: "Help Center",
-            icon: "assets/icons/Question mark.svg",
-            press: () {},
+          InkWell(
+            onTap: (){
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Selectplant()));
+            },
+                      child: ProfileMenu(
+              text: "Add plants",
+              icon: "assets/icons/Settings.svg",
+              press: () {
+                 Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Selectplant()));
+              },
+            ),
           ),
           ProfileMenu(
             text: "Log Out",
